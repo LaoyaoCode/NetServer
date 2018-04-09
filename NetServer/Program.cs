@@ -16,7 +16,7 @@ namespace NetServer
 
         public static void Main(string[] args)
         {
-            
+            Init();       
         }
 
         public static void Init()

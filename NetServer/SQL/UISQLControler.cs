@@ -71,6 +71,7 @@ namespace NetServer.SQL
 
         /// <summary>
         /// 添加一个用户记录
+        /// test success , 2018.4.9
         /// </summary>
         /// <param name="model">用户模型数据</param>
         /// <returns></returns>
@@ -134,6 +135,7 @@ namespace NetServer.SQL
 
         /// <summary>
         /// 更新一个用户数据
+        /// test success , 2018.4.9
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
@@ -185,6 +187,7 @@ namespace NetServer.SQL
 
         /// <summary>
         /// 删除一个记录
+        /// test success , 2018.4.9
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -230,6 +233,7 @@ namespace NetServer.SQL
 
         /// <summary>
         /// 获取所有的用户信息
+        /// test success , 2018.4.9
         /// </summary>
         /// <returns></returns>
         public List<UserInformatioonModel> GetAllUser()
