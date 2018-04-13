@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AS>
+  <!--最大线程数目-->
+  <MaxThreadNumber>160</MaxThreadNumber>
+  <!--最小线程数目-->
+  <MinThreadNumber>16</MinThreadNumber>
+  <!--端口数-->
+  <PortNumber>22333</PortNumber>
+</AS>

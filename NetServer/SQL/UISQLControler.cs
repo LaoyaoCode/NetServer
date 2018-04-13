@@ -75,7 +75,7 @@ namespace NetServer.SQL
         /// </summary>
         /// <param name="model">用户模型数据</param>
         /// <returns></returns>
-        public bool AddUser(UserInformatioonModel model)
+        public bool AddUser(UserInformationModel model)
         {
             bool isSucceeded = false;
             StringBuilder builder = new StringBuilder();
@@ -139,7 +139,7 @@ namespace NetServer.SQL
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        public bool UpDateUser(UserInformatioonModel model)
+        public bool UpDateUser(UserInformationModel model)
         {
             StringBuilder builder = new StringBuilder();
 
@@ -236,9 +236,9 @@ namespace NetServer.SQL
         /// test success , 2018.4.9
         /// </summary>
         /// <returns></returns>
-        public List<UserInformatioonModel> GetAllUser()
+        public List<UserInformationModel> GetAllUser()
         {
-            List<UserInformatioonModel> result = new List<UserInformatioonModel>();
+            List<UserInformationModel> result = new List<UserInformationModel>();
 
             try
             {
@@ -255,7 +255,7 @@ namespace NetServer.SQL
                     {
                         while (reader.Read())
                         {
-                            UserInformatioonModel user = new UserInformatioonModel();
+                            UserInformationModel user = new UserInformationModel();
 
                             user.ID = int.Parse(reader["ID"].ToString());
                             user.UserName = reader["UserName"].ToString();

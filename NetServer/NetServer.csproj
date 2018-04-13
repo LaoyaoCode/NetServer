@@ -60,6 +60,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controler\Player.cs" />
+    <Compile Include="Models\UserInformationServer.cs" />
     <Compile Include="Net\CommunicateObj.cs" />
     <Compile Include="Net\NetCModels.cs" />
     <Compile Include="Program.cs" />
@@ -67,13 +69,18 @@
     <Compile Include="SCThings.cs" />
     <Compile Include="ServerControler.cs" />
     <Compile Include="SQL\UISQLControler.cs" />
-    <Compile Include="SQL\UserInformatioonModel.cs" />
+    <Compile Include="SQL\UserInformationModel.cs" />
+    <Compile Include="Tools\SetDataReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AppSet.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="think.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

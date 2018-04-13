@@ -8,6 +8,9 @@ namespace NetServer
 {
     public static class SCThings
     {
+        /// 设定数据文件路径
+        /// </summary>
+        public const string AppSetDataPath = "AppSet.xml";
         /// <summary>
         /// SQL数据库文件名字，没有分隔符
         /// </summary>

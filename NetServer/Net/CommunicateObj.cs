@@ -19,6 +19,10 @@ namespace NetServer.Net
             /// 用户登录
             /// </summary>
             Login ,
+            /// <summary>
+            /// 用户登录返回数据
+            /// </summary>
+            LoginInBack 
         }
 
         /// <summary>
@@ -32,10 +36,36 @@ namespace NetServer.Net
         /// <summary>
         /// 细节字符串
         /// </summary>
-        public string DetialString = string.Empty;
+        public string DetailString = string.Empty;
         /// <summary>
         /// 数据类型
         /// </summary>
         public DataTypeEnum DataType;
+
+        /// <summary>
+        /// 创建网络交流传输对象
+        /// </summary>
+        /// <param name="dataType">数据类型</param>
+        /// <param name="data">传输数据</param>
+        /// <param name="isSuccess">是否成功，服务端发送给客户端</param>
+        /// <param name="detail">要发送给客户端的细节字符串</param>
+        public CommunicateObj(DataTypeEnum dataType , Object data , bool isSuccess , string detail)
+        {
+            DataType = dataType;
+            Data = data;
+            IsSuccess = isSuccess;
+            DetailString = detail;
+        }
+
+        /// <summary>
+        /// 创建网络交流传输对象
+        /// </summary>
+        /// <param name="dataType">传输对象类型</param>
+        /// <param name="data">传输数据</param>
+        public CommunicateObj(DataTypeEnum dataType , Object data)
+        {
+            DataType = dataType;
+            Data = data;
+        }
     }
 }

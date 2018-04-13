@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace NetServer.SQL
 {
     [Serializable]
-    public class UserInformatioonModel
+    public class UserInformationModel
     {
         /// <summary>
         /// 用户ID
