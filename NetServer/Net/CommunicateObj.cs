@@ -22,7 +22,11 @@ namespace NetServer.Net
             /// <summary>
             /// 用户登录返回数据
             /// </summary>
-            LoginInBack 
+            LoginInBack,
+            /// <summary>
+            /// 用于标识心跳表，监测client是否还活着
+            /// </summary>
+            IsAlive
         }
 
         /// <summary>
