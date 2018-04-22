@@ -288,7 +288,7 @@ namespace NetServer.Controler
                     else
                     {
                         UIModel = uiModel;
-                        CommunicateObj objBack = new CommunicateObj(CommunicateObj.DataTypeEnum.LoginInBack, uiModel, true);
+                        CommunicateObj objBack = new CommunicateObj(CommunicateObj.DataTypeEnum.LoginInBack, uiModel, true , typeof(UserInformationModel));
                         this.SendMessage(objBack);
                     }
 

@@ -286,7 +286,7 @@ namespace Normal.SQL
         /// <returns></returns>
         public UserInformationModel GetUserFromUserName(string userName)
         {
-            UserInformationModel result = new UserInformationModel();
+            UserInformationModel result = null;
 
             try
             {
@@ -304,6 +304,8 @@ namespace Normal.SQL
                     {
                         while (reader.Read())
                         {
+                            result = new UserInformationModel();
+
                             result.ID = int.Parse(reader["ID"].ToString());
                             result.UserName = reader["UserName"].ToString();
                             result.Password = reader["Password"].ToString();
