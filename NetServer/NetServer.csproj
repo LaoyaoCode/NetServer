@@ -61,7 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controler\Player.cs" />
-    <Compile Include="Models\UserInformationServer.cs" />
     <Compile Include="Net\CommunicateObj.cs" />
     <Compile Include="Net\NetCModels.cs" />
     <Compile Include="Program.cs" />

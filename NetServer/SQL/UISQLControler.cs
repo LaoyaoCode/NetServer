@@ -7,7 +7,7 @@ using System.Data.Common;
 using System.IO;
 using NetServer;
 
-namespace NetServer.SQL
+namespace Normal.SQL
 {
     public class UISQLControler
     {
@@ -273,6 +273,51 @@ namespace NetServer.SQL
                 }
             }
             catch(Exception e)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// 从userName获取用户资料
+        /// test success , 2018.4.21
+        /// </summary>
+        /// <param name="userName">用户名</param>
+        /// <returns></returns>
+        public UserInformationModel GetUserFromUserName(string userName)
+        {
+            UserInformationModel result = new UserInformationModel();
+
+            try
+            {
+                //连接数据库
+                using (SQLiteConnection sqlConnect = new SQLiteConnection(ConnectingString))
+                {
+                    sqlConnect.Open();
+
+                    String commandString = "SELECT * FROM " + TableName + " WHERE UserName = " + 
+                        "\'" + userName + "\'";
+                    SQLiteCommand command = sqlConnect.CreateCommand();
+                    command.CommandText = commandString;
+
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            result.ID = int.Parse(reader["ID"].ToString());
+                            result.UserName = reader["UserName"].ToString();
+                            result.Password = reader["Password"].ToString();
+                            result.TotalMoney = int.Parse(reader["TotalMoney"].ToString());
+                            result.HadPlayerModelsID = reader["HadPlayerModelsID"].ToString();
+                            result.MFriendsID = reader["MFriendsID"].ToString();
+                            result.Name = reader["Name"].ToString();
+                        }
+
+                        return result;
+                    }
+                }
+            }
+            catch (Exception e)
             {
                 return null;
             }

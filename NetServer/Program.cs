@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Net;
 using System.Net.Sockets;
-using NetServer.Net;
-using NetServer.SQL;
+using Normal.Net;
+using Normal.SQL;
 using NetServer.Tools;
 
 namespace NetServer
@@ -42,7 +42,11 @@ namespace NetServer
                 return false;
             }
 
-            
+            while(true)
+            {
+                Console.ReadLine();
+                break;
+            }
 
             return true;
         }

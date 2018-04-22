@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Normal.SQL;
 
-namespace NetServer.Net
+namespace Normal.Net
 {
     /// <summary>
     /// 登录信息模型
